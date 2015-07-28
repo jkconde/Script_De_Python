@@ -4,11 +4,7 @@ from json import dumps
 import requests
 
 # Send data to web service, passing a JSON object as INPUT
-<<<<<<< HEAD
 def sendJson(payload, url = 'http://radiogis.uis.edu.co/sensores/medidas', type = 'json'):
-=======
-def sendJson(payload, url = 'http://radiogis.uis.edu.co/sensores/web/medidas', type = 'json'):
->>>>>>> 595099555896caf19bc26460b0c323875e30db70
 
   if type == 'json':
     headers = {'content-type': 'application/json'}
@@ -33,7 +29,6 @@ def sendJson(payload, url = 'http://radiogis.uis.edu.co/sensores/web/medidas', t
 # latitude = numeric value or string containning a numeric value
 # longitude = numeric value or string containning a numeric value
 
-<<<<<<< HEAD
 def sendRaw(date, tag, value, sensor_id, type_id, longitude, latitude, campaign,
 comment = None, url = 'http://radiogis.uis.edu.co/sensores/medidas', 
 type = 'json'): 
@@ -41,14 +36,5 @@ type = 'json'):
   payload = {"fecha_toma": date, "etiqueta": tag, "valor_medido": value,
    "sensor": sensor_id, "tipo": type_id, "comentario": comment,
    "latitud": latitude, "longitud": longitude, "campanya":campaign}
-=======
-def sendRaw(date, tag, value, sensor_id, type_id, longitude, latitude,
-comment = None, url = 'http://radiogis.uis.edu.co/sensores/web/medidas', 
-type = 'json'):
-
-  payload = {"fecha_toma": date, "etiqueta": tag, "valor_medido": value,
-   "sensor": sensor_id, "tipo": type_id, "comentario": comment,
-   "latitud": latitude, "longitud": longitude}
->>>>>>> 595099555896caf19bc26460b0c323875e30db70
   sendJson(payload, url, type)
   return 1

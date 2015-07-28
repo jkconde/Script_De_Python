@@ -25,11 +25,7 @@ def main():
      print(cadenadedatos)
     
      print(date)
-<<<<<<< HEAD
      sendRaw(date, 1, cadenadedatos, 2, 3, -73.45, 7.87, 3)
-=======
-     sendRaw(date, 1, cadenadedatos, 2, 3, -73.45, 7.87)
->>>>>>> 595099555896caf19bc26460b0c323875e30db70
 
          #sendRaw(date, 1, valor, 2, 3, -73.45, 7.87,coment)
      os.remove(datosarenas)               
